@@ -29,21 +29,52 @@ Acerca do conjunto de dados, eles foram originalmente coletados por meio de pesq
 
 ### 2. Modelagem
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+A base possui 27901 registros e inicialamente foi realizada a análise dos dados, com o intuito de compreender suas colunas e verificar possíveis inconsistências. Foram feitas análises visuais de diversas colunas e foi constatado que as variáveis relacionadas a emprego possuem 99% dos valores uniformes ou zerados. Exemplos foram as colunas: "Profession", "Work Pressure" e "Job Satisfaction",as quais respectivamente possuem 99% dos valores preenchidos como: "Student" e zeros. Além disso, a coluna "Finantial Stress" que era para ser numérica, estava como categórica, porque 3 registros continham a string "?", logo substitui essa string pelo valor 0. 
 
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
+No que tange outros tratamentos de dados, foram utilizados o LabelEncoder para codificar as colunas categóricas, facilitando a utilização dos modelos e utilizei o StandarScaler para normalizar os dados. Não foram encontrados valores nulos e a base está balanceada com relação a casos de depressão e pensamentos suicidas. 
+
+No quesito de modelos, foram utilzados os de classificação a fim de identificar as pessoas com pensamentos suicidas e as com depressão. Os modelos escolhidos foram: SVM, Random Forest, KNN e Decision Tree Classifier. 
+
 
 ### 3. Resultados
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+As correlações mais fortes para os casos de depressão foram as respectivas variáveis: 
+Pensamentos suicidas, Pressão acadêmica, estresse financeiro
 
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
+Já as variáveis com maior correlação na identificação de pensamentos suicidas foram: 
+Depressão, estresse financeiro e pressão acadêmica.
+
+#### Identificação de Depressão
+
+O modelo que melhor performou foi o SVM com os seguintes resultados:    
+
+**Resultados de Treino**    
+Acurácia:  0.86    
+Kappa:  0.70    
+F1:  0.88     
+
+**Resultados de Teste**    
+Acurácia:  0.83    
+Kappa:  0.65    
+F1:  0.86    
+
+#### Identificação de Pensamentos suicidas
+
+O modelo que melhor performou foi o SVM com os seguintes resultados:
+
+**Resultados de Treino**    
+Acurácia:  0.78    
+Kappa:  0.54    
+F1:  0.82    
+
+**Resultados de Teste**    
+Acurácia:  0.77    
+Kappa:  0.52    
+F1:  0.80    
 
 ### 4. Conclusões
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
-
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
+Para uma melhor qualidade de vida e prevenção de casos de suicídio, faz se necessário investigar possíveis fatores que contribuem para esses quadros. Dessa forma, o presente trabalho buscou identificar esses fatores e utilizá-los, a fim de identificar pessoas que estão ou possam vir a apresentar esses quadros.
 
 ---
 
