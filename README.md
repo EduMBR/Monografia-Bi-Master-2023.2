@@ -46,10 +46,22 @@ Depressão, estresse financeiro e pressão acadêmica.
 
 #### Identificação de Depressão
 
-O modelo que melhor performou foi o SVM com os seguintes resultados:    
+Os modelos que melhor performaram foram o Random Forest Classifier, junto do SVM com os seguintes resultados:    
 
-**Resultados de Treino**    
-Acurácia:  0.86    
+##### Random Forest:          
+**Resultados de Treino**     
+Acurácia:  0.90    
+Kappa:  0.80        
+F1:  0.92          
+
+**Resultados de Teste**    
+Acurácia:  0.83   
+Kappa:  0.65     
+F1:  0.85         
+
+##### SVM       
+**Resultados de Treino**             
+Acurácia:  0.86      
 Kappa:  0.70    
 F1:  0.88     
 
@@ -60,8 +72,20 @@ F1:  0.86
 
 #### Identificação de Pensamentos suicidas
 
-O modelo que melhor performou foi o SVM com os seguintes resultados:
+Os modelos que melhor performaram, também foram o Random Forest Classifier, junto do SVM com os seguintes resultados:
 
+##### Random Forest     
+**Resultados de Treino**      
+Acurácia:  0.825             
+Kappa:  0.62            
+F1:  0.86     
+
+**Resultados de Teste**     
+Acurácia:  0.77     
+Kappa:  0.52    
+F1:  0.81    
+
+##### SVM     
 **Resultados de Treino**    
 Acurácia:  0.78    
 Kappa:  0.54    
