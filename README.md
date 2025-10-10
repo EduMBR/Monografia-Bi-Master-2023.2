@@ -29,9 +29,9 @@ Acerca do conjunto de dados, eles foram originalmente coletados por meio de pesq
 
 ### 2. Modelagem
 
-A base possui 27901 registros e inicialamente foi realizada a análise dos dados, com o intuito de compreender suas colunas e verificar possíveis inconsistências. Foram feitas análises visuais de diversas colunas e foi constatado que as variáveis relacionadas a emprego possuem 99% dos valores uniformes ou zerados. Exemplos foram as colunas: "Profession", "Work Pressure" e "Job Satisfaction",as quais respectivamente possuem 99% dos valores preenchidos como: "Student" e zeros. Além disso, a coluna "Finantial Stress" que era para ser numérica, estava como categórica, porque 3 registros continham a string "?", logo substitui essa string pelo valor 0. 
+A base possui 27901 registros e inicialamente foi realizada a análise dos dados, com o intuito de compreender suas colunas e verificar possíveis inconsistências. Foram feitas análises visuais de diversas colunas e foi constatado que as variáveis relacionadas a emprego possuem 99% dos valores uniformes ou zerados. Exemplos foram as colunas: "Profession", "Work Pressure" e "Job Satisfaction",as quais respectivamente possuem 99% dos valores preenchidos como: "Student" e zeros. Além disso, a coluna "Finantial Stress" que era para ser numérica, estava como categórica, porque 3 registros continham a string "?", logo foi feita a substituição dessa string pelo valor 0. 
 
-No que tange outros tratamentos de dados, foram utilizados o LabelEncoder para codificar as colunas categóricas, facilitando a utilização dos modelos e utilizei o StandarScaler para normalizar os dados. Não foram encontrados valores nulos e a base está balanceada com relação a casos de depressão e pensamentos suicidas. 
+No que tange outros tratamentos de dados, foram utilizados o LabelEncoder para codificar as colunas categóricas, facilitando a utilização dos modelos. Para normalizar os dados, o StandarScaler foi o escolhido. Não foram encontrados valores nulos e a base está balanceada com relação a casos de depressão e pensamentos suicidas. 
 
 No quesito de modelos, foram utilzados os de classificação a fim de identificar as pessoas com pensamentos suicidas e as com depressão. Os modelos escolhidos foram: SVM, Random Forest, KNN e Decision Tree Classifier. 
 
@@ -48,57 +48,26 @@ Depressão, estresse financeiro e pressão acadêmica.
 
 Os modelos que melhor performaram foram o Random Forest Classifier, junto do SVM com os seguintes resultados:    
 
-##### Random Forest:          
-**Resultados de Treino**     
-Acurácia:  0.90    
-Kappa:  0.80        
-F1:  0.92          
+**Resultados de Treino**   
+<img width="235" height="84" alt="image" src="https://github.com/user-attachments/assets/92aff8b8-569e-4413-a678-a03bddbf49b9" />
 
 **Resultados de Teste**    
-Acurácia:  0.83   
-Kappa:  0.65     
-F1:  0.85         
+<img width="235" height="84" alt="image" src="https://github.com/user-attachments/assets/193d3ebe-736d-4cb5-81f1-47ba7c5b8bfa" />
 
-##### SVM       
-**Resultados de Treino**             
-Acurácia:  0.86      
-Kappa:  0.70    
-F1:  0.88     
 
-**Resultados de Teste**    
-Acurácia:  0.83    
-Kappa:  0.65    
-F1:  0.86    
-
-#### Identificação de Pensamentos suicidas
+#### Identificação de Pensamentos suicidas    
 
 Os modelos que melhor performaram, também foram o Random Forest Classifier, junto do SVM com os seguintes resultados:
+   
+**Resultados de Treino**          
+<img width="240" height="84" alt="image" src="https://github.com/user-attachments/assets/ebf01b16-29a9-42c7-b8de-a6a8a1898608" />
 
-##### Random Forest     
-**Resultados de Treino**      
-Acurácia:  0.825             
-Kappa:  0.62            
-F1:  0.86     
-
-**Resultados de Teste**     
-Acurácia:  0.77     
-Kappa:  0.52    
-F1:  0.81    
-
-##### SVM     
-**Resultados de Treino**    
-Acurácia:  0.78    
-Kappa:  0.54    
-F1:  0.82    
-
-**Resultados de Teste**    
-Acurácia:  0.77    
-Kappa:  0.52    
-F1:  0.80    
+**Resultados de Teste**        
+<img width="240" height="84" alt="image" src="https://github.com/user-attachments/assets/0e0c939b-d72e-440c-8387-1774603c2fd1" />
 
 ### 4. Conclusões
 
-Para uma melhor qualidade de vida e prevenção de casos de suicídio, faz se necessário investigar possíveis fatores que contribuem para esses quadros. Dessa forma, o presente trabalho buscou identificar esses fatores e utilizá-los, a fim de identificar pessoas que estão ou possam vir a apresentar esses quadros.
+Para uma melhor qualidade de vida e prevenção de casos de suicídio, faz se necessário investigar possíveis fatores que contribuem para esses quadros. Dessa forma, o presente trabalho buscou identificar esses fatores e utilizá-los, a fim de identificar pessoas que estão ou possam vir a apresentar esses quadros. Dentre os modelos desenvolvidos, os que apresentaram melhores resultados de teste foram os que utilizaram Random Forest Classifier e SVM.
 
 ---
 
