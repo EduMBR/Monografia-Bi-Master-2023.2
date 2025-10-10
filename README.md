@@ -39,10 +39,12 @@ No quesito de modelos, foram utilzados os de classificação a fim de identifica
 ### 3. Resultados
 
 As correlações mais fortes para os casos de depressão foram as respectivas variáveis: 
-Pensamentos suicidas, Pressão acadêmica, estresse financeiro
-
-Já as variáveis com maior correlação na identificação de pensamentos suicidas foram: 
+Pensamentos suicidas, Pressão acadêmica, estresse financeiro. Já as variáveis com maior correlação na identificação de pensamentos suicidas foram: 
 Depressão, estresse financeiro e pressão acadêmica.
+
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/7cec07c5-776c-464f-ad77-6cfe049d0127" />                
+
+Correlação entre as variáveis
 
 #### Identificação de Depressão
 
