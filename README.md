@@ -19,7 +19,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em português -->
 
-O objetivo deste trabalho é prever casos de depressão e pensamentos suicidas no meio acadêmico. Os dados utilizados são provenientes do dataset do Kaggle: student-depression-dataset e que foram coletados através de pesquisas de estudantes na Índia. O conjunto de dados inclui detalhes demográficos, pressões acadêmicas e relacionadas ao trabalho, hábitos de estilo de vida e indicadores específicos de saúde mental. Com isso, foram realizadas análises, correções de dados, desenvolvimento de modelos de classificação, com o intuito de conseguir prever a ocorrência de depressão e pensamentos suicidas no meio acadêmico. 
+O objetivo deste trabalho é prever casos de depressão e pensamentos suicidas no meio acadêmico. Os dados utilizados são provenientes do dataset do Kaggle: student-depression-dataset e que foram coletados através de pesquisas respondidas por estudantes na Índia. O conjunto de dados inclui detalhes demográficos, pressões acadêmicas e relacionadas ao trabalho, hábitos de estilo de vida e indicadores específicos de saúde mental. Com isso, foram realizadas análises, correções de dados, desenvolvimento de modelos de classificação, a fim de conseguir prever a ocorrência de depressão e pensamentos suicidas no meio acadêmico. 
 
 ### 1. Introdução
 
@@ -29,9 +29,9 @@ Acerca do conjunto de dados, eles foram originalmente coletados por meio de pesq
 
 ### 2. Modelagem
 
-Inicialamente foi realizada a análise dos dados, com o intuito de compreender suas colunas e verificar possíveis inconsistências. Foram feitas análises visuais de diversas colunas e foi constatado que as variáveis relacionadas a emprego possuem 99% dos valores uniformes ou zerados. Exemplos foram as colunas: "Profession", "Work Pressure" e "Job Satisfaction",as quais respectivamente possuem 99% dos valores preenchidos como: "Student" e zeros. Além disso, a coluna "Finantial Stress" que era para ser numérica, estava como categórica, porque 3 registros continham a string "?", logo foi feita a substituição dessa string pelo valor 0. 
+Inicialamente foi realizada a análise dos dados, com o intuito de compreender suas colunas e verificar possíveis inconsistências. Foram feitas análises visuais de diversas colunas e foi constatado que as variáveis relacionadas a emprego possuem 99% dos valores uniformes ou zerados. Alguns exemplos foram as colunas: "Profession", "Work Pressure" e "Job Satisfaction",as quais respectivamente possuem 99% dos valores preenchidos como: "Student" e zeros. Além disso, a coluna "Finantial Stress" deveria ser numérica, no entanto estava como categórica, porque 3 registros continham a string "?". Dessa forma, a substituição dessa string pelo valor 0 foi realizada, para uniformizar a coluna. 
 
-No que tange outros tratamentos de dados, foram utilizados o LabelEncoder para codificar as colunas categóricas, facilitando a utilização dos modelos. Para normalizar os dados, o StandarScaler foi o escolhido. Não foram encontrados valores nulos e a base está balanceada com relação a casos de depressão e pensamentos suicidas. 
+No que tange outros tratamentos de dados, foi utilizado o LabelEncoder para codificar as colunas categóricas, facilitando a utilização dos modelos. Para normalizar os dados, o StandarScaler foi o escolhido. Não foram encontrados valores nulos e a base está balanceada com relação a casos de depressão e pensamentos suicidas. 
 
 No quesito de modelos, foram utilzados os de classificação a fim de identificar as pessoas com pensamentos suicidas e as com depressão. Os modelos escolhidos foram: SVM, Random Forest, KNN e Decision Tree Classifier. 
 
